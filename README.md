@@ -3,7 +3,7 @@
 Viktor Modroczký (vktr274 on GitHub)\
 Computer Vision @ FIIT STU
 
-Used Methods: manual thresholding, adaptive thresholding, Otsu's thresholding, changing contrast, Laplacian edge detection, erosion, dilation, finding and drawing contours, calculating contour areas to remove smaller contours
+Used Methods: color space conversions, manual thresholding, adaptive thresholding, Otsu's thresholding, changing contrast, Laplacian edge detection, erosion, dilation, finding and drawing contours, calculating contour areas to remove smaller contours
 
 ## 1. Histology Image
 
@@ -77,4 +77,4 @@ Notebook: [blood_cells.ipynb](blood_cells.ipynb)
 
 ### 3.3. Remarks
 
-The biggest challenge was to separate the overlapping red blood cells in the image. We found that here is a trade-off between good cell separation and the accuracy of the contours. The chosen method of increasing the contrast and using erosion to separate the cells worked pretty well. However, the contours do not represent cell shapes very well. If we were to use different adaptive threshold parameters, we could copy the actual outside contours of the cells, but this would lead to less cells being found due to worse separation, and multiple cells being identified as one due to the overlaps.
+The biggest challenge was to separate the overlapping red blood cells in the image. We found that here is a trade-off between good cell separation and the accuracy of the contours. The chosen method of increasing the contrast and using erosion to separate the cells worked pretty well. However, the contours do not represent cell shapes very well. If we were to use different adaptive threshold parameters and/or no erosion, we could copy the actual outside contours of the cells, but this would lead to less cells being found due to worse separation, and multiple cells being identified as one due to the overlaps.

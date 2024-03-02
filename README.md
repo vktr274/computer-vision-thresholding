@@ -7,6 +7,8 @@ Used Methods: manual thresholding, adaptive thresholding, Otsu's thresholding, c
 
 ## 1. Histology Image
 
+Notebook: [histology.ipynb](histology.ipynb)
+
 ### Result
 
 - left: green dots are cells we found (2248 cells found)
@@ -23,6 +25,8 @@ Used Methods: manual thresholding, adaptive thresholding, Otsu's thresholding, c
 5. Find contours in the image and draw them (2248 contours found).
 
 ## 2. Beer Foam
+
+Notebook: [beer.ipynb](beer.ipynb)
 
 ### Result
 
@@ -44,6 +48,8 @@ Used Methods: manual thresholding, adaptive thresholding, Otsu's thresholding, c
 9. Find contours in the image and draw them (409 contours found).
 
 ## 3. Red Blood Cells
+
+Notebook: [blood_cells.ipynb](blood_cells.ipynb)
 
 ### Result
 

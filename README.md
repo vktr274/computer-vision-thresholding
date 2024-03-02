@@ -9,14 +9,14 @@ Used Methods: manual thresholding, adaptive thresholding, Otsu's thresholding, c
 
 Notebook: [histology.ipynb](histology.ipynb)
 
-### Result
+### 1.1. Result
 
 - left: green dots are cells we found (2248 cells found)
 - right: original image
 
 ![histology](images/histology_result.png)
 
-### Steps
+### 1.2. Steps
 
 1. Load the image and display each channel separately (R, G, B).
 2. Use R channel because it has the most contrast.
@@ -28,14 +28,14 @@ Notebook: [histology.ipynb](histology.ipynb)
 
 Notebook: [beer.ipynb](beer.ipynb)
 
-### Result
+### 2.1. Result
 
 - left: green contours are bubbles we found (409 bubbles found)
 - right: original image
 
 ![beer](images/beer_result.png)
 
-### Steps
+### 2.2. Steps
 
 1. Load the image and display each channel separately (R, G, B).
 2. Use grayscale image, no benefit from using any channel separately.
@@ -51,14 +51,14 @@ Notebook: [beer.ipynb](beer.ipynb)
 
 Notebook: [blood_cells.ipynb](blood_cells.ipynb)
 
-### Result
+### 3.1. Result
 
 - left: green contours are cells we found (48 cells found)
 - right: original image
 
 ![blood](images/blood_result.png)
 
-### Steps
+### 3.2. Steps
 
 1. Load the image and display each channel separately (R, G, B).
 2. Use grayscale image, no benefit from using any channel separately.
@@ -74,3 +74,7 @@ Notebook: [blood_cells.ipynb](blood_cells.ipynb)
 12. Remove small unwanted contours from the thresholded image by calculating the area of each contour and only keeping the ones with an area greater than sum of the mean area of all contours and the standard deviation of all contour areas.
 13. Erode the binary image using a 5x5 structuring element to improve the separation of the red blood cells.
 14. Find contours in the image and draw them (48 contours found).
+
+### 3.3. Remarks
+
+The biggest challenge was to separate the overlapping red blood cells in the image. We found that here is a trade-off between good cell separation and the accuracy of the contours. The chosen method of increasing the contrast and using erosion to separate the cells worked pretty well. However, the contours do not represent cell shapes very well. If we were to use different adaptive threshold parameters, we could copy the actual outside contours of the cells, but this would lead to less cells being found due to worse separation, and multiple cells being identified as one due to the overlaps.

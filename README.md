@@ -16,6 +16,12 @@ Notebook: [histology.ipynb](histology.ipynb)
 
 ![histology](images/histology_result.png)
 
+Zoomed in images to see the cells better:
+
+![histology_zoom_1](images/histology_result_zoom_1.png)
+
+![histology_zoom_2](images/histology_result_zoom_2.png)
+
 ### 1.2. Steps
 
 1. Load and resize the image and display each channel separately (R, G, B).
